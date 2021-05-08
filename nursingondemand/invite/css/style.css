@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+a:focus,button:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0;
+}
+.bt1{border-top: 1px solid #ccc;}
+
+.borderBox{ border:1px solid #ccc; }
+.h36{height: 36px;}
+.h120{height: 120px;}
+.pt1{padding-top: 1px;}
+.pt2{padding-top: 2px;}
+.pt3{padding-top: 3px;}
+.pt4{padding-top: 4px;}
+.pt5{padding-top: 5px;}
+
+.pb1{padding-bottom: 1px;}
+.pb2{padding-bottom: 2px;}
+.pb3{padding-bottom: 3px;}
+.pb4{padding-bottom: 4px;}
+.pb5{padding-bottom: 5px;}
+
+.pl1 {padding-left: 1px;}
+.pl2 {padding-left: 2px;}
+.pl3 {padding-left: 3px;}
+.pl4 {padding-left: 4px;}
+.pl5 {padding-left: 5px;}
+
+.pr1 {padding-right: 1px;}
+.pr2 {padding-right: 2px;}
+.pr3 {padding-right: 3px;}
+.pr4 {padding-right: 4px;}
+.pr5 {padding-right: 5px;}
+
+.mt7{ margin-top: 7px; }
+.mt8{ margin-top: 8px; }
+
+
+.container{ width: 700px;}
+
+    .checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #3c763d;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+@media screen and (max-width: 750px) {
+  .container{ width: 100%; }
+  .h120{ height: 145px; }
+}
